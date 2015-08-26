@@ -1,16 +1,12 @@
 import async from 'async';
 import ccase from 'change-case';
 
-function* entries(object) {
-    for (let key of Object.keys(object)) {
-        yield [ key, object[ key ] ];
-    }
-}
-
 function cli(options) {
     let result = [];
 
-    for (let [key, value] of entries(options)) {
+    for (let key of Object.keys(options)) {
+        let value = options[key];
+
         if (value === null || value === void 0) {
             continue;
         }
