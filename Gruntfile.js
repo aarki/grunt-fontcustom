@@ -47,6 +47,6 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-jscs');
 
     // lint and test by default
-    grunt.registerTask('default', [ 'babel', 'jshint', 'jscs' ]);
+    grunt.registerTask('default', [ 'jshint', 'jscs' ]);
 
 };
